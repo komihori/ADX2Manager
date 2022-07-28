@@ -13,8 +13,8 @@ public class ADX2Manager : MonoBehaviour
     public static bool CueSheetLoaded { get; private set; } = false;
 
     private void Awake() {
-        if (ADX2LEManager.Instance == null) {
-            ADX2LEManager.Instance = this;
+        if (ADX2Manager.Instance == null) {
+            ADX2Manager.Instance = this;
             DontDestroyOnLoad(this);
         } else {
             Destroy(this);
